@@ -1,0 +1,23 @@
+{
+  "generationParameters": {
+    "generationDate": "Tue May 12 2026 14:57:52 GMT+0400 (Azerbaijan Standard Time)",
+    "generatorPlatform": "Visual Studio Code",
+    "serviceType": "SAP System (ABAP On-Premise)",
+    "metadataFilename": "",
+    "serviceUrl": "https://az1v01sfhp001:44300/sap/opu/odata4/sap/zui_my_chatbot_js_o4/srvd/sap/zui_my_chatbot_js/0001/",
+    "appName": "chatbot_ui_js",
+    "appTitle": "chatbot_ui_js",
+    "appDescription": "chatbot_ui_js",
+    "appNamespace": "chatbot_ui_js",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.114.0",
+    "enableEslint": true,
+    "enableTypeScript": false,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.22.0",
+    "template": "Basic V4",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [],
+    "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```"
+  }
+}

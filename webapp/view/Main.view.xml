@@ -1,0 +1,32 @@
+<mvc:View controllerName="chatbotuijs.chatbotuijs.controller.App"
+    xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.f"
+    displayBlock="true" height="100%">
+    <Shell id="shell">
+        <App id="mainApp">
+            <pages>
+                <Page id="page" title="Socar HR Dəstək Botu">
+                    <content>
+                        <ScrollContainer id="chatScrollContainer" height="90%" vertical="true" focusable="true">
+                            <List id="chatList" items="{chatModel>/messages}" showSeparators="None">
+                                <FeedListItem 
+                                    id="chatFeedItem"
+                                    sender="{chatModel>sender}" 
+                                    text="{chatModel>text}" 
+                                    info="{chatModel>timestamp}"
+                                    senderActive="false"
+                                    iconActive="false" />
+                            </List>
+                        </ScrollContainer>
+                    </content>
+                    <footer>
+                        <OverflowToolbar id="chatToolbar">
+                            <Input id="messageInput" placeholder="Sualınızı yazın..." submit="onSend" width="80%" />
+                            <ToolbarSpacer id="spacer" />
+                            <Button id="sendButton" icon="sap-icon://paper-plane" press="onSend" type="Emphasized" text="Göndər" />
+                        </OverflowToolbar>
+                    </footer>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

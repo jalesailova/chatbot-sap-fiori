@@ -1,0 +1,32 @@
+specVersion: "4.0"
+metadata:
+  name: chatbotuijs.chatbotuijs
+type: application
+server:
+  customMiddleware:
+    - name: fiori-tools-proxy
+      afterMiddleware: compression
+      configuration:
+        ignoreCertErrors: true   # ← false-dan true-ya dəyiş
+        ui5:
+          path:
+            - /resources
+            - /test-resources
+          url: https://ui5.sap.com
+        backend:
+          - path: /sap
+            url: https://10.240.22.3:44300
+            client: '100'
+            secure: false
+            ignoreCertErrors: true   # ← 'ignoreCertError' deyil, 'ignoreCertErrors' (s ilə)
+    - name: fiori-tools-appreload
+      afterMiddleware: compression
+      configuration:
+        port: 35729
+        path: webapp
+        delay: 300
+    - name: fiori-tools-preview
+      afterMiddleware: fiori-tools-appreload
+      configuration:
+        flp:
+          theme: sap_horizon
